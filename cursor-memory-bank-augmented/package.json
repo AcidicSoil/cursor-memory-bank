@@ -1,0 +1,45 @@
+{
+  "name": "cursor-memory-probe",
+  "displayName": "Cursor Memory Probe",
+  "description": "VS Code extension that provides MCP memory server functionality for Cursor and other MCP-compatible agents",
+  "publisher": "acidicsoil",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.90.0" },
+  "activationEvents": ["*"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "memoryProbe", "title": "Memory Probe", "icon": "resources/icon.svg" }
+      ]
+    },
+    "views": {
+      "memoryProbe": [
+        { "id": "memoryProbeView", "name": "Active Webviews" },
+        { "id": "memoryBankView", "name": "Memory Bank" }
+      ]
+    },
+    "commands": [
+      {
+        "command": "cursor-memory-probe.remember",
+        "title": "Remember a key-value pair",
+        "category": "Memory Probe"
+      },
+      {
+        "command": "cursor-memory-probe.recall",
+        "title": "Recall a value by key",
+        "category": "Memory Probe"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "vscode:prepublish": "npm run compile",
+    "test": "npm run compile && node ./dist/test-mcp-server.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^20.11.0"
+  }
+}

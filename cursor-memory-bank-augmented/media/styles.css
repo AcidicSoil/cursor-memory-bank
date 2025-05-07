@@ -1,0 +1,140 @@
+/* Memory Bank UI Styles */
+
+body {
+  font-family: var(--vscode-font-family);
+  color: var(--vscode-foreground);
+  background-color: var(--vscode-editor-background);
+  padding: 10px;
+  margin: 0;
+}
+
+h1 {
+  color: var(--vscode-editor-foreground);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+  padding-bottom: 5px;
+}
+
+h2 {
+  color: var(--vscode-editor-foreground);
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.memory-bank-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.memory-form {
+  background-color: var(--vscode-editor-inactiveSelectionBackground);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 3px;
+}
+
+.form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.memory-list {
+  background-color: var(--vscode-editor-inactiveSelectionBackground);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.memories-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.memory-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.memory-item:last-child {
+  border-bottom: none;
+}
+
+.memory-key {
+  font-weight: bold;
+  color: var(--vscode-symbolIcon-keywordForeground);
+  margin-bottom: 5px;
+}
+
+.memory-value {
+  color: var(--vscode-foreground);
+  margin-bottom: 10px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.memory-actions {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+}
+
+.memory-load-btn {
+  background-color: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+}
+
+.memory-load-btn:hover {
+  background-color: var(--vscode-button-secondaryHoverBackground);
+}
+
+.memory-delete-btn {
+  background-color: var(--vscode-errorForeground);
+  color: white;
+}
+
+.memory-delete-btn:hover {
+  opacity: 0.8;
+}

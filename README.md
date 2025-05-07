@@ -183,6 +183,11 @@ your-project/
 │   ├── tasks.md
 │   ├── activeContext.md
 │   └── progress.md
+├── cursor-memory-bank-augmented/  # NEW VS Code extension
+│   ├── package.json
+│   └── src/
+│       ├── extension.ts
+│       └── memoryServer.ts
 └── custom_modes/
     ├── van_instructions.md
     ├── plan_instructions.md
@@ -268,11 +273,41 @@ The Memory Bank system is actively being developed and improved. Key points to u
 
 This is a personal hobby project that brings me joy to build and develop. I welcome feedback and suggestions for improvement. The system is designed for experimentation and may evolve significantly based on user experiences.
 
+## VS Code Extension: Cursor Memory Probe
+
+The repository now includes a VS Code extension that provides MCP (Model Context Protocol) memory server functionality for Cursor and other MCP-compatible agents like Augment.
+
+### Features
+
+- Exposes a lightweight MCP "memory" server that both Cursor's native agent and Augment can call
+- Provides a simple UI to view active webviews
+- Implements `remember` and `recall` methods for key-value storage
+
+### Getting Started
+
+1. Navigate to the extension directory:
+   ```bash
+   cd cursor-memory-bank-augmented
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Compile the extension:
+   ```bash
+   npm run compile
+   ```
+4. Launch the Extension Development Host:
+   - Press F5 in VS Code
+
+For more details, see the [extension README](cursor-memory-bank-augmented/README.md).
+
 ## Resources
 
 - [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
 - [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md)
 - [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
+- [Cursor MCP Documentation](https://docs.cursor.com/context/model-context-protocol)
 - Mode-specific instruction files in the `custom_modes/` directory
 
 ---
